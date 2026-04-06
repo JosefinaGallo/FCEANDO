@@ -1,0 +1,252 @@
+<html>
+ <head>
+  <title>
+   FCEANDO
+  </title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style></style>
+ </head>
+
+ <body>
+    <header>
+        <div class="container">
+         <div class="logo">
+          <img alt="MiLogo" height="100" src="logoxx.png" width="auto"/>
+         </div>
+         <div class="title">
+         <!-- <h1>
+           FCEANDO
+          </h1> -->
+         </div>
+         <nav>
+          <ul>
+           <li>
+            <a href="#">
+             Inicio
+            </a>
+           </li>
+           <li>
+            <a href="#" onclick="openAboutModal()">
+             + Info
+            </a>
+           </li>
+
+           <li>
+            <a href="#">
+             Contact
+            </a>
+           </li>
+          </ul>
+         </nav>
+        </div>
+       </header>  
+  <section class="py-8">
+   <h2 class="text-2xl font-bold text-center mb-6">
+    PRIMER SEMESTRE
+   </h2>
+   <div class="container">
+    <div class="button-cube" id="WIP">
+     <img alt="114A" height="150" src="114A.png" width="200"/>
+     <div class="content">
+      <h3>
+       Cálculo 1A
+      </h3>
+      <p>
+       bue
+      </p>
+      <a class="btn" href="#" onclick="openModal('CALCULO 1A')">
+       PRACTICAR
+      </a>
+     </div>
+    </div>
+    <div class="button-cube" id="WIP">
+     <img alt="C10" height="150" src="C10.PNG" width="200"/>
+     <div class="content">
+      <h3>
+       Conceptos Contables
+      </h3>
+      <p>
+       we.
+      </p>
+      <a class="btn" href="#" onclick="openModal('C10')">
+       PRACTICAR
+      </a>
+     </div>
+    </div>
+    <div class="button-cube">
+     <img alt="AYGO" height="150" src="AYGO.png" width="200"/>
+     <div class="content">
+      <h3>
+       Administración y Gestión de Organizaciones
+      </h3>
+      <a class="btn" href="#" onclick="openModal('AYGO')">
+       PRACTICAR
+      </a>
+     </div>
+    </div>
+    <div class="button-cube">
+     <img alt="E10" height="150" src="E10.png" width="200"/>
+     <div class="content">
+      <h3>
+       Microeconomía
+      </h3>
+      <a class="btn" href="#" onclick="openModal('MICRO')">
+       PRACTICAR
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="py-8">
+   <h2 class="text-2xl font-bold text-center mb-6">
+    SEGUNDO SEMESTRE
+   </h2>
+   <div class="container">
+    <div class="button-cube" id="WIP">
+     <img alt="128A" height="150" src="128A.png" width="200"/>
+     <div class="content">
+      <h3>
+       Cálculo 1b
+
+      </h3>
+      <p>
+       
+      </p>
+      <a class="btn" href="#" onclick="openModal('128B')">
+       PRACTICAR
+      </a>
+     </div>
+    </div>
+    <div class="button-cube" id="WIP">
+     <img alt="C20" height="150" src="C20.png" width="200"/>
+     <div class="content">
+      <h3>
+       Contabilidad General I
+      </h3>
+      <p>
+       
+      </p>
+      <a class="btn" href="#" onclick="openModal('CGI')">
+       PRACTICAR
+      </a>
+     </div>
+    </div>
+
+   </div>
+  </section>
+  <div class="modal" id="modal">
+   <div class="modal-content">
+    <span class="close" onclick="closeModal()">
+     &times;
+    </span>
+    <h2 id="modal-title">
+    </h2>
+    <div class="modal-list" id="modal-list">
+    </div>
+   </div>
+  </div>
+  <div class="modal" id="about-modal">
+   <div class="modal-content">
+    <span class="close" onclick="closeAboutModal()">
+     &times;
+    </span>
+    <h2>
+     + Información
+    </h2>
+    <p>
+     Bienvenido! <br>
+     Este es un proyecto para uso reservado. <br>
+     Se ha publicado como un TEST. <br>
+     Si te sirvió házmelo saber!
+    </p>
+   </div>
+  </div>
+  <script>
+   function openModal(title) {
+            document.getElementById('modal-title').innerText = title;
+            const modalList = document.getElementById('modal-list');
+            modalList.innerHTML = '';
+
+            let items = [];
+            switch (title) {
+                case 'CALCULO 1A':
+                    items = [
+                        { text: 'PRÓXIMAMENTE', url: '' },
+                        
+                    ];
+                    break;
+                case '128B':
+                    items = [
+                        { text: 'PRÓXIMAMENTE', url: '' },
+                    ];
+                    break;
+                case 'C10':
+                    items = [
+                        { text: 'PRÓXIMAMENTE', url: '' },
+                        
+                        
+                    ];
+                    break;
+                case 'AYGO':
+                    items = [
+                        { text: '1ER CONTROL 2024', url: 'AYGO/1CONTROL2024/index.html' },
+                        { text: '1ER CONTROL 2025', url: 'AYGO/1CONTROL2025/index.html' },
+                    ];
+                    break;
+                case 'MICRO':
+                    items = [
+                        { text: 'PRÓXIMAMENTE', url: '' },
+                    ];
+                    break;
+                case 'CGI':
+                    items = [
+                        { text: 'PRÓXIMAMENTE', url: '' },
+                    ];
+                    break;
+                case 'Historic City Center':
+                    items = [
+                        { text: 'Old Buildings', url: 'https://example.com/old-buildings' },
+                        { text: 'Museums', url: 'https://example.com/historic-museums' },
+                        { text: 'Historic Sites', url: 'https://example.com/historic-sites' },
+                        { text: 'Cultural Events', url: 'https://example.com/cultural-events' },
+                        { text: 'Local Cuisine', url: 'https://example.com/local-cuisine' }
+                    ];
+                    break;
+                case 'City Park':
+                    items = [
+                        { text: 'Green Spaces', url: 'https://example.com/green-spaces' },
+                        { text: 'Playgrounds', url: 'https://example.com/playgrounds' },
+                        { text: 'Walking Trails', url: 'https://example.com/walking-trails' },
+                        { text: 'Picnic Areas', url: 'https://example.com/picnic-areas' },
+                        { text: 'Outdoor Activities', url: 'https://example.com/outdoor-activities' }
+                    ];
+                    break;
+            }
+
+            items.forEach(item => {
+                const button = document.createElement('button');
+                button.innerText = item.text;
+                button.classList.add('modal-list-button');
+                button.onclick = () => window.location.href = item.url;
+                modalList.appendChild(button);
+            });
+
+            document.getElementById('modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+        }
+
+        function openAboutModal() {
+            document.getElementById('about-modal').style.display = 'flex';
+        }
+
+        function closeAboutModal() {
+            document.getElementById('about-modal').style.display = 'none';
+        }
+  </script>
+ </body>
+</html>
